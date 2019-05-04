@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="Card.js"></script>
+    <script src="App.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="remote-control">
+        <ul>
+            <li id="name" data-page="0">Introduce</li>
+            <li id="project" data-page="1000">My Project</li>
+            <li id="skills" data-page="2000">My Skills</li>
+        </ul>
+        <div id="hide">
+            <i class="fas fa-angle-double-up"></i>
+        </div>
+        <div id="show" class="hidden">
+            <i class="fas fa-angle-double-down"></i>
+        </div>
+    </div>
+    <section id="header">
+        <h1>
+            HurJungUn's Portfolio
+            <br>
+            <a href="">My GitHub</a>
+        </h1>
+    </section>
+    <section id="visual">
+        <h1>
+            My Project
+        </h1>
+        <div class="content">
+            <div class="pic-grid">
+                <div class="grid-item">
+                    <a target="blank" href="https://github.com/HurJungUn/jobmatch">
+                        <h1>node.js프로젝트</h1>
+                        <img src="images/nodejs.png" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a target="blank" href="https://github.com/HurJungUn/chart">
+                        <h1>파싱데이터로 차트만들기</h1>
+                        <img src="images/nodejs.png" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a target="blank" href="https://github.com/HurJungUn/canvas">
+                        <h1>canvas를 이용한 원형 그래프 만들기</h1>
+                        <img src="images/nodejs.png" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="#">
+                        <h1>프로젝트 준비중 입니다.</h1>
+                        <img src="images/android.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="title">
+            <h2>My Skills</h2>
+        </div>
+        <div class="card-list">
+            <div class="card" data-percent="80">
+                <div class="canvas-container">
+                    <canvas>
+
+                    </canvas>
+                </div>
+                <div class="info">
+                    <p>HTML & CSS</p>
+                </div>
+            </div>
+            <div class="card" data-percent="60">
+                <div class="canvas-container">
+                    <canvas>
+
+                    </canvas>
+                </div>
+                <div class="info">
+                    <p>Javascript</p>
+                </div>
+            </div>
+            <div class="card" data-percent="30">
+                <div class="canvas-container">
+                    <canvas>
+
+                    </canvas>
+                </div>
+                <div class="info">
+                    <p>PHP</p>
+                </div>
+            </div>
+            <div class="card" data-percent="88">
+                <div class="canvas-container">
+                    <canvas>
+
+                    </canvas>
+                </div>
+                <div class="info">
+                    <p>Unity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footermenu">
+            <h1>MADE BY HurJungUn</h1>
+            <h1>Tel:010-4509-7826</h1>
+        </div>
+    </footer>
+</body>
+
+</html>
