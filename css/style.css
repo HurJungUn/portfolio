@@ -104,7 +104,7 @@ li{
     height: 250px;
 }
 
-.canvas-container > canvas {
+canvas {
     width: 100%;
     height: 100%;
 }
@@ -115,6 +115,11 @@ li{
     text-align: center;
 }
 
+.chart{
+    width: 60%;
+    height: 500px;
+}
+
 #header {
     height: 1000px;
     background-color: rgba(20, 40, 200, 0.5);
@@ -122,11 +127,13 @@ li{
 }
 
 #header > h1 {
-    line-height: 500px;
+    line-height: 300px;
     font-size: 100px;
 }
 
-#header > h1 > a{
+#header > h1 a{
+    width: 150px;
+    height: 750px;
     font-size: 50px;
     border-radius: 10px;
     border: 1px solid white;
@@ -135,6 +142,7 @@ li{
 
 #visual {
     box-sizing: border-box;
+    width: 100%;
     height: 1000px;
     background-color: rgba(2000, 150, 100, 0.5);
     text-align: center; 
@@ -145,30 +153,51 @@ li{
     font-weight: bold;
 }
 
-#visual > .content {
-    display: flex;
-    justify-content: center;
-    margin-top:65px;
-    width:100%;
+#visual .content {
+    margin-top: 50px;
+    width: 80%;
+    height: 100%;
+    margin: auto;
 }
 
-#visual .pic-grid {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 300px;
-    grid-gap:100px;
+#visual .fund-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 340px;
+    grid-gap: 15px;
+    padding: 20px;
+    height: 100%;
+    align-self: center;
+    
 }
 
-.pic-grid > .grid-item {
-    border-radius: 5px;
+#visual .fund {
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
     overflow: hidden;
 }
 
-.pic-grid > .grid-item img {
-    width:100%;
-    height:100%;
-    background-size: cover;
-    background-repeat: no-repeat;
+.fund .info {
+    margin: auto;
+    width: 80%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+#visual .fund > .canvas-container {
+    width: 100%;
+    height: 200px;
+}
+
+#visual .fund > .canvas-container > img{
+    border-bottom: 10px solid black;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -180,4 +209,47 @@ footer {
 
 .footermenu{
     line-height: 100px;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid transparent;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007dff;
+}
+
+.btn-blue:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-blue:hover {
+    background-color: #c82333;
+    border-color: #db2130;
+}
+
+.btn-sm {
+    font-size: 0.7rem;
+}
+
+.btn-lg {
+    font-size: 1.1rem;
 }

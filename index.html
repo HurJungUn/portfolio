@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/chart/Chart.min.css">
+    <script src="/js/chart/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <script src="Card.js"></script>
-    <script src="App.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="/js/Card.js"></script>
+    <script src="/js/App.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -32,7 +35,12 @@
         <h1>
             HurJungUn's Portfolio
             <br>
-            <a href="">My GitHub</a>
+            <div class="gitbar">
+                <a target="blank" href="https://github.com/HurJungUn">
+                    My GitHub
+                </a>
+            </div>
+
         </h1>
     </section>
     <section id="visual">
@@ -40,30 +48,74 @@
             My Project
         </h1>
         <div class="content">
-            <div class="pic-grid">
-                <div class="grid-item">
-                    <a target="blank" href="https://github.com/HurJungUn/jobmatch">
-                        <h1>node.js프로젝트</h1>
-                        <img src="images/nodejs.png" alt="">
-                    </a>
+            <div class="fund-list">
+                <div class="fund">
+                    <div class="canvas-container">
+                        <img src="/images/jobmatch.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>언어:html,css,js,node.js</h4>
+                        <p class="name">node.js프로젝트</p>
+                        <p class="end-date">2019-05-02</p>
+                        <div class="button-row">
+                            <a target="blank" href="https://github.com/HurJungUn/jobmatch">
+                                <button class="btn btn-blue btn-sm">
+                                    GitHub
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <a target="blank" href="https://github.com/HurJungUn/chart">
-                        <h1>파싱데이터로 차트만들기</h1>
-                        <img src="images/nodejs.png" alt="">
-                    </a>
+                <div class="fund">
+                    <div class="canvas-container">
+                        <img src="/images/창업지원.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>언어:html,css,js</h4>
+                        <p class="name">창업지원펀드사이트</p>
+                        <p class="end-date">2019-05-03</p>
+                        <div class="button-row">
+                            <a target="blank" href="https://github.com/HurJungUn/chart">
+                                <button class="btn btn-blue btn-sm">
+                                    GitHub
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <a target="blank" href="https://github.com/HurJungUn/canvas">
-                        <h1>canvas를 이용한 원형 그래프 만들기</h1>
-                        <img src="images/nodejs.png" alt="">
-                    </a>
+                <div class="fund">
+                    <div class="canvas-container">
+                        <img src="/images/canvas.png" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>언어:html,css,js</h4>
+                        <p class="name">canvas를 이용한 원그리기</p>
+                        <p class="end-date">2019-05-04</p>
+                        <div class="button-row">
+                            <a target="blank" href="https://github.com/HurJungUn/canvas">
+                                <button class="btn btn-blue btn-sm">
+                                    GitHub
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-item">
-                    <a href="#">
-                        <h1>프로젝트 준비중 입니다.</h1>
-                        <img src="images/android.png" alt="">
-                    </a>
+                <div class="fund">
+                    <div class="canvas-container">
+                        <img src="" alt="">
+                    </div>
+                    <div class="info">
+                        <h4>아직 준비중입니다.</h4>
+                        <p class="name">아직 준비중입니다.</p>
+                        <p class="end-date">아직 준비중입니다.</p>
+                        <div class="button-row">
+                            <a target="blank" href="">
+                                <button class="btn btn-blue btn-sm">
+                                    GitHub
+                                </button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,14 +145,14 @@
                     <p>Javascript</p>
                 </div>
             </div>
-            <div class="card" data-percent="30">
+            <div class="card" data-percent="75">
                 <div class="canvas-container">
                     <canvas>
 
                     </canvas>
                 </div>
                 <div class="info">
-                    <p>PHP</p>
+                    <p>JSP</p>
                 </div>
             </div>
             <div class="card" data-percent="88">
@@ -110,9 +162,14 @@
                     </canvas>
                 </div>
                 <div class="info">
-                    <p>Unity</p>
+                    <p>Android Studio</p>
                 </div>
             </div>
+        </div>
+        <div class="chart">
+            <canvas id="myChart">
+
+            </canvas>
         </div>
     </section>
     <footer>
@@ -121,6 +178,7 @@
             <h1>Tel:010-4509-7826</h1>
         </div>
     </footer>
+    <script src="/js/Charts.js"></script>
 </body>
 
 </html>

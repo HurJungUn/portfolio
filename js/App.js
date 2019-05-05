@@ -4,6 +4,7 @@ class App {
         let hide = document.querySelector("#hide");
         let show = document.querySelector("#show");
         let ul = document.querySelector("#remote-control > ul");
+        let all = document.querySelector("body");
         hide.addEventListener("click", function(){
             ul.style.display = "none";
             hide.classList.add("hidden");
@@ -14,13 +15,16 @@ class App {
             show.classList.add("hidden");
             hide.classList.remove("hidden");
         });
-        let clickscroll = document.querySelector("#name");
-        // usb참고
-        // clickscroll.addEventListener("click", function(){
-
-        //     window.scrollY = 1000;
-        //     console.log(window.scrollY);
-        // });
+        let clickscroll = document.querySelectorAll("#remote-control > ul > li");
+        clickscroll[0].addEventListener("click", function(){   
+            $( 'html, body' ).animate( { scrollTop : 0 }, 1000 );
+        });
+        clickscroll[1].addEventListener("click", function(){
+            $( 'html, body' ).animate( { scrollTop : 1000 }, 1000 );
+        });
+        clickscroll[2].addEventListener("click", function(){
+            $( 'html, body' ).animate( { scrollTop : 2000 }, 1000 );
+        });
         this.cardList = [];
         list.forEach(x => {
             let p = x.dataset.percent;
@@ -32,6 +36,7 @@ class App {
         this.p = document.querySelector("#portfolio");
         
         window.addEventListener("scroll", this.scrollHandle.bind(this));
+        
     }
 
     scrollHandle(e){
